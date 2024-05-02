@@ -1,9 +1,13 @@
-import './Main.css'
-const Main= ()=>{
-return (
+import "./Main.css";
+import { Button } from "react-bootstrap";
+const Main = () => {
+  return (
     <div className="mainHeader">
-    main
+      header
+      <Button as="a" variant="primary">
+        Button as link
+      </Button>
     </div>
-)
-}
-export default Main
+  );
+};
+export default Main;
