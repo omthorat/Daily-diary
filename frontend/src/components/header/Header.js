@@ -6,12 +6,19 @@ import {
   Form,
   Button,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./Header.css";
 const Header = () => {
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#">DailyDiary</Navbar.Brand>
+          <Navbar.Brand>
+            <Link to="/" className="links">
+              {" "}
+              DailyDiary
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
 
           <Navbar.Collapse id="navbarScroll">
@@ -29,7 +36,11 @@ const Header = () => {
               className=" my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
               navbarScroll>
-              <Nav.Link href="#action1">MyNotes</Nav.Link>
+              <Nav.Link>
+                <Link to="/mynotes" className="links">
+                  MyNotes
+                </Link>
+              </Nav.Link>
               <Nav.Link href="#action2"></Nav.Link>
               <NavDropdown title="Omkar Thorat" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">My Profile</NavDropdown.Item>
