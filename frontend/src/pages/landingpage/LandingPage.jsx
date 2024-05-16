@@ -1,5 +1,6 @@
 import { Col, Container, Row, Button } from "react-bootstrap";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <>
@@ -11,16 +12,16 @@ const LandingPage = () => {
               One Safe Place to Avoid all Your Waste
             </Col>
             <Col className="welcome-buttons">
-              <a href="/login">
+              <Link to="/login">
                 <Button variant="dark" size="lg">
                   Login In
                 </Button>
-              </a>
-              <a href="/register">
-                <Button variant="outline-dark" size="lg">
+              </Link>
+              <Link to="/signup">
+                <Button variant="outline-primary" size="lg">
                   Sign Up
                 </Button>
-              </a>
+              </Link>
             </Col>
           </Row>
         </Container>
