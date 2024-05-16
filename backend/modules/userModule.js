@@ -18,6 +18,7 @@ const userSchema = mongoose.Schema(
     pic: {
       type: String,
       required: true,
+      default:"https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
     },
   },
   {

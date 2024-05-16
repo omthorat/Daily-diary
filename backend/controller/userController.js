@@ -1,4 +1,5 @@
 const User = require("../modules/userModule");
+const genrateToken = require("../utiles/genrateToken");
 const registerUser = async (req, res) => {
   const { name, email, password, pic } = req.body;
   const userExists = await User.findOne({ email });
@@ -19,6 +20,7 @@ const registerUser = async (req, res) => {
       email: user.email,
       password: user.password,
       pic: user.pic,
+      token:genrateToken(user._id)
     });
   } else {
     res.status(400);
@@ -35,6 +37,7 @@ const authUser = async (req, res) => {
       email: user.email,
       password: user.password,
       pic: user.pic,
+      token:genrateToken(user._id)
     });
   } else {
     res.status(400);
