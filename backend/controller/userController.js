@@ -20,7 +20,7 @@ const registerUser = async (req, res) => {
       email: user.email,
       password: user.password,
       pic: user.pic,
-      token:genrateToken(user._id)
+      token: genrateToken(user._id),
     });
   } else {
     res.status(400);
@@ -37,11 +37,11 @@ const authUser = async (req, res) => {
       email: user.email,
       password: user.password,
       pic: user.pic,
-      token:genrateToken(user._id)
+      token: genrateToken(user._id),
     });
   } else {
     res.status(400);
-    throw new Error("invalid user");
+    throw new Error("Email or Password is incorrect");
   }
 };
 module.exports = { registerUser, authUser };
