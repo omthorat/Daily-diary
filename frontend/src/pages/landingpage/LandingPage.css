@@ -1,5 +1,6 @@
 .landing-img {
-  background-image: url("../../../public/Images/notebook.jpg");
+  /* background-image: url("../../../public/Images/notebook.jpg"); */
+  background-image: url("../../../public/Images/notepad.jpg");
   width: 100%;
   height: 93vh;
   background-position: center;

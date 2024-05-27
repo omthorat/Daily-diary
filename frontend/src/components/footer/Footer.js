@@ -3,7 +3,7 @@ import "./Footer.css"
 const Footer = () => {
   return (
     <>
-      <Container>
+      <Container className="fotter">
         <Row>
           <Col className="text-align-center py-2">copy &#169; right of DailyDiary</Col>
         </Row>

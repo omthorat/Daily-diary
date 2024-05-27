@@ -11,7 +11,12 @@ const UserRegisterPage=()=>{
     e.preventDefault()
    console.log(userName,userEmail,userPassword,userPic)
    }
-
+  const handleSignReset=()=>{
+    setUserName("")
+    setUserEmail("")
+    setUserPassword("")
+    setUserPic("")
+  }
 return(
     <>
     <Container className='signup-page'>
@@ -42,7 +47,7 @@ return(
       </Form.Group>
       <div className="signupbtn">
       <Button variant="primary" type='submit'>SignUp</Button>
-      <Button variant="secondary">Reset</Button>
+      <Button type='reset' onClick={()=>handleSignReset()} variant="secondary">Reset</Button>
       </div>
     </Form>
         </Container>

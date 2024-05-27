@@ -11,7 +11,14 @@ const LoginPage=()=>{
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(email,password)
+        if(!(email==="" && password==="")){
+          console.log(email,password)
+        }
+       
+    }
+    const handleReset=()=>{
+      setEmail("")
+      setPassword("")
     }
     return(
         <>
@@ -31,7 +38,7 @@ const LoginPage=()=>{
       </Form.Group>
       <div className="login">
       <Button type="submit" variant="primary">Login</Button>
-      <Button variant="secondary">Reset</Button>
+      <Button type="reset" onClick={()=> handleReset()} variant="secondary">Reset</Button>
       </div>
     </Form>
         </Container>
