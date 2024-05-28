@@ -6,9 +6,12 @@ import {
   Form,
   Button,
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { useHistory } from 'react-router-dom';
+import { Link,useNavigate } from "react-router-dom";
 import "./Header.css";
+
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -45,7 +48,10 @@ const Header = () => {
               <NavDropdown title="Omkar Thorat" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">My Profile</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">LogOut</NavDropdown.Item>
+                <NavDropdown.Item onClick={()=>{
+                  localStorage.removeItem("userinfo")
+                  navigate("/")
+                }} >LogOut</NavDropdown.Item>
               </NavDropdown>
               {/* <Nav.Link href="#" disabled>
               Link

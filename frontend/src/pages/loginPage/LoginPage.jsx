@@ -33,7 +33,8 @@ const LoginPage = () => {
         config
       );
       setError("");
-      console.log(data);
+      localStorage.setItem("userinfo",JSON.stringify(data))
+      console.log(data,JSON.stringify(data.email))
       setLoading(false);
     } catch (err) {
       console.log(err.message);
